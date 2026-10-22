@@ -1,7 +1,6 @@
 // Shift — 2027 State of Browsing (Mandy)
 (function () {
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var EASE = 'cubic-bezier(0.23, 1, 0.32, 1)';
 
   // ---------- Count numbers up when their card appears ----------
   function countUp(el) {
@@ -63,38 +62,14 @@
   var body = document.body;
   var nav = document.querySelector('.nav');
   var pageRow = document.querySelector('[data-page-chapters]');
-  var pageChips = pageRow.querySelectorAll('.chip');
   var navChips = document.querySelectorAll('[data-nav-chapters] .chip');
-  var desktop = window.matchMedia('(min-width: 1100px)');
   var absorbed = false;
 
-  // FLIP: animate each nav chip from where the matching page chip is (or back to it)
-  function fly(toNav) {
-    navChips.forEach(function (chip, i) {
-      var page = pageChips[i].getBoundingClientRect();
-      var slot = chip.getBoundingClientRect();
-      var dx = page.left - slot.left, dy = page.top - slot.top;
-      var sx = page.width / slot.width;
-      var away = 'translate(' + dx + 'px,' + dy + 'px) scaleX(' + sx + ')';
-      var frames = toNav
-        ? [{ transform: away, opacity: 1 }, { transform: 'none', opacity: 1 }]
-        : [{ transform: 'none', opacity: 1 }, { transform: away, opacity: 1 }];
-      chip.style.transformOrigin = 'left center';
-      chip.animate(frames, { duration: 560, delay: i * 35, easing: EASE });
-    });
-  }
-
-  function setAbsorbed(next, animate) {
+  // The nav chips softly fade in (CSS handles the animation)
+  function setAbsorbed(next) {
     if (next === absorbed) return;
     absorbed = next;
-    var canFly = animate && !reduced && desktop.matches;
-    if (next) {
-      body.classList.add('is-absorbed');
-      if (canFly) fly(true);
-    } else {
-      if (canFly) fly(false);
-      body.classList.remove('is-absorbed');
-    }
+    body.classList.toggle('is-absorbed', next);
     navChips.forEach(function (c) { c.tabIndex = next ? 0 : -1; });
   }
 
