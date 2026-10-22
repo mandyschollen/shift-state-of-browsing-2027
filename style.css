@@ -106,6 +106,15 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .chips .chip { transition: opacity 400ms ease, border-color 200ms, color 200ms, box-shadow 200ms; }
 .is-absorbed .chips .chip { opacity: 0; }
 @media (prefers-reduced-motion: reduce) { .nav__chapters .chip { transform: none; } }
+/* Nav chips stay equal width like Figma, but never narrower than their title (so nothing is cut off) */
+.nav__chapters .chip { flex: 1 1 0; min-width: max-content; overflow: visible; text-overflow: clip; }
+/* Tighter spacing, and the 01–04 numbers drop out, so full titles still fit */
+@media (max-width: 1239px) {
+  .nav { gap: 20px; }
+  .nav__chapters { gap: 8px; }
+  .nav__chapters .chip { padding-inline: 12px; }
+  .nav__chapters .chip span { display: none; }
+}
 @media (max-width: 1099px) {
   .nav { gap: 16px; }
   .nav__chapters { display: none; }
