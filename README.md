@@ -8,9 +8,9 @@ Open `index.html` in a browser by double-clicking it. You don't need a build ste
 
 ## What's on the page
 
-- **Nav:** dark pill nav with the Shift logo and Download PDF. Once you scroll past the chapter row below the hero, its chapters softly fade into the nav, and the chip for the chapter you're reading is highlighted.
-- **Hero:** "The 2027 State of Browsing Report" over the Figma light leak.
-- **Four chapters:** collapsible cards. *Expand insights* opens each chapter's stat cards.
+- **Nav:** there's no nav over the hero, just the Shift logo centred 80px from the top. Once you scroll past the chapter row, the whole nav (Shift logo, the four chapters and Download PDF) softly fades in, and the chip for the chapter you're reading is highlighted.
+- **Hero:** "The 2027 State of Browsing Report" over the Figma light leak, which stretches edge to edge on any screen width.
+- **Four chapters:** collapsible cards. *Expand insights* opens a chapter: it grows from the centred column to the full screen width and its stat cards appear. When two open chapters sit next to each other, their lines merge into one.
   1. Browser loyalty: Chrome market-share ring (58%), familiarity bars (90%, 25%, 38%), gauges (54%, 32%)
   2. Digital burnout: burnout donut, 4-in-10 tabs, gauges (20%, 43%)
   3. Privacy & control: decision drivers, top frustrations, control and AI-concern stats
@@ -41,3 +41,4 @@ This copy lives on Mandy's personal GitHub. The original is in the team sandbox 
 - **2026-10-21:** Added the remaining Figma images (hero light leak, card glows, chapter grid) and checked the page against Figma at desktop and phone sizes.
 - **2026-10-22:** Standalone copy made for this repository: plain CSS with no build step, and fonts bundled.
 - **2026-10-22:** Nav chapters now softly fade in (staggered, with a small lift) instead of flying up from the chapter row.
+- **2026-10-22:** There's no nav over the hero: the Shift logo sits centred above the title, 80px from the top, and the whole nav fades in once you scroll past the chapter row. The hero light leak stretches full width on large screens. Open chapters grow to the full screen width, and neighbouring open chapters share one divider line.
