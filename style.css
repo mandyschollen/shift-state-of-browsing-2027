@@ -268,8 +268,9 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 /* ---------- Donut (Figma 1554:41087) ---------- */
 .donut {
   position: relative; flex: none; width: 274px; height: 274px;
-  -webkit-mask: conic-gradient(#000 var(--sweep), transparent 0);
-          mask: conic-gradient(#000 var(--sweep), transparent 0);
+  /* starts 7deg before 12 o'clock, in the gap between segments, so no rounded end gets clipped */
+  -webkit-mask: conic-gradient(from -7deg, #000 var(--sweep), transparent 0);
+          mask: conic-gradient(from -7deg, #000 var(--sweep), transparent 0);
   transition: --sweep 1.6s var(--ease-out);
 }
 .is-in .donut { --sweep: 360deg; }

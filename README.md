@@ -44,3 +44,4 @@ This copy lives on Mandy's personal GitHub. The original is in the team sandbox 
 - **2026-10-22:** There's no nav over the hero: the Shift logo sits centred above the title, 80px from the top, and the whole nav fades in once you scroll past the chapter row. The hero light leak stretches full width on large screens. Open chapters grow to the full screen width, and neighbouring open chapters share one divider line.
 - **2026-10-22:** Stats re-animate every time a chapter is reopened.
 - **2026-10-22:** Reverted the full-width chapters: open chapters stay at the regular centred size again (the merged divider lines went with it).
+- **2026-10-22:** Burnout donut sweep now starts just before 12 o'clock so the dark grey segment's rounded end isn't clipped.
