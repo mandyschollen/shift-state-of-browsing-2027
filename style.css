@@ -174,7 +174,7 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
   background: rgb(0 0 0 / 0.2); border: 2px solid var(--hairline);
 }
 .card--split > * { flex: 1 1 0; min-width: 0; }
-.card--split > .card__text--fixed { flex: 0 0 min(450px, 100%); }
+.card--split > .card__text--fixed { flex: 0 1 450px; }
 
 /* Gauge card — perspective grid (Figma 1550:40081) */
 .card--gauge {
@@ -191,7 +191,9 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 
 @media (max-width: 899px) {
   .card--feature, .card--split { flex-direction: column; align-items: stretch; }
-  .card--feature > :last-child, .card--split .tens { align-self: center; }
+  .card--feature > :last-child { align-self: center; }
+  .card--split > *, .card--split > .card__text--fixed { flex: none; }
+  .card--split .tens { flex: none !important; width: min(100% + 18px, 470px); max-width: none; margin: -9px auto; }
   .card--feature .card__text { width: 100%; }
 }
 
@@ -278,17 +280,37 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .legend li { display: flex; align-items: center; gap: 12px; font-weight: 500; font-size: 16px; line-height: 1.25; letter-spacing: -0.02em; }
 .legend img { width: 19.453px; height: 19.453px; }
 
-/* ---------- 4 in 10 (Figma 1557:41128) ---------- */
-.tens { position: relative; flex: 0 0 452px !important; height: 170px; }
-.tens img {
-  position: absolute; left: -9.2px; top: -9.2px; width: 461.2px; height: 179.2px;
-  -webkit-mask: linear-gradient(90deg, #000 var(--wipe, 0%), transparent calc(var(--wipe, 0%) + 12%));
-          mask: linear-gradient(90deg, #000 var(--wipe, 0%), transparent calc(var(--wipe, 0%) + 12%));
+/* ---------- 4 in 10 (Figma 1557:41128): 10 circles, built from the Figma SVG's values ---------- */
+/* 77px circles on a 93.6px pitch; they shrink with the card so none get cut off */
+.tens {
+  position: relative; flex: 0 1 470px !important; min-width: 0; width: 100%; max-width: 470px; /* 452 + 9px glow room each side */
+  display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); align-content: center; gap: 16px 16.6px; padding: 9px; margin: -9px;
 }
-@property --wipe { syntax: "<percentage>"; inherits: true; initial-value: 0%; }
-.tens { transition: --wipe 1.3s var(--ease-out); }
-.is-in .tens { --wipe: 100%; }
-@media (max-width: 560px) { .tens { transform: scale(0.7); transform-origin: left center; margin-right: -136px; } }
+.dot {
+  position: relative; aspect-ratio: 1; border-radius: 50%; background: rgb(36 39 47 / 0.25);
+  opacity: 0; transform: scale(0.4);
+  transition: opacity 250ms ease, transform 550ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+/* 1px gradient outline */
+.dot::after {
+  content: ""; position: absolute; inset: 0; border-radius: 50%; padding: 1px;
+  background: linear-gradient(95.7deg, rgb(255 255 255 / 0.1), rgb(255 255 255 / 0.25));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor;
+          mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+}
+.dot.on { background: rgb(86 147 252 / 0.15); box-shadow: 0 0 9.2px rgb(86 147 252 / 0.5); }
+.dot.on::after { background: linear-gradient(95.7deg, #5693fc, #67daf4); }
+/* pop in one by one */
+.is-in .dot { opacity: 1; transform: none; }
+.is-in .dot:nth-child(2)  { transition-delay: 90ms; }
+.is-in .dot:nth-child(3)  { transition-delay: 180ms; }
+.is-in .dot:nth-child(4)  { transition-delay: 270ms; }
+.is-in .dot:nth-child(5)  { transition-delay: 360ms; }
+.is-in .dot:nth-child(6)  { transition-delay: 450ms; }
+.is-in .dot:nth-child(7)  { transition-delay: 540ms; }
+.is-in .dot:nth-child(8)  { transition-delay: 630ms; }
+.is-in .dot:nth-child(9)  { transition-delay: 720ms; }
+.is-in .dot:nth-child(10) { transition-delay: 810ms; }
 
 /* ---------- Ranked list / columns ---------- */
 .ranked { display: flex; flex-direction: column; }
@@ -390,5 +412,5 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 [data-reveal].is-in { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) {
   [data-reveal] { opacity: 1; transform: none; transition: none; }
-  .bar i, .col i, .gauge__arc circle, .chrome-ring__arc, .chrome-ring__logo, .donut, .tens { transition: none !important; }
+  .bar i, .col i, .gauge__arc circle, .chrome-ring__arc, .chrome-ring__logo, .donut, .dot { transition: none !important; }
 }

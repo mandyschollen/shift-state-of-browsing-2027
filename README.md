@@ -45,3 +45,4 @@ This copy lives on Mandy's personal GitHub. The original is in the team sandbox 
 - **2026-10-22:** Stats re-animate every time a chapter is reopened.
 - **2026-10-22:** Reverted the full-width chapters: open chapters stay at the regular centred size again (the merged divider lines went with it).
 - **2026-10-22:** Burnout donut sweep now starts just before 12 o'clock so the dark grey segment's rounded end isn't clipped.
+- **2026-10-22:** 4-in-10 dots rebuilt as 10 separate circles (same colours, outline and glow as Figma). They pop in one by one and shrink to fit smaller screens instead of being cut off. Stacked cards on phones no longer leave a gap.
