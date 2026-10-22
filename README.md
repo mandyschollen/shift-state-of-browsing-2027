@@ -47,3 +47,4 @@ This copy lives on Mandy's personal GitHub. The original is in the team sandbox 
 - **2026-10-22:** Burnout donut sweep now starts just before 12 o'clock so the dark grey segment's rounded end isn't clipped.
 - **2026-10-22:** 4-in-10 dots rebuilt as 10 separate circles (same colours, outline and glow as Figma). They pop in one by one and shrink to fit smaller screens instead of being cut off. Stacked cards on phones no longer leave a gap.
 - **2026-10-22:** Nav chapter titles are never cut off: chips stay equal width when there's room but never shrink below their title; between 1100 and 1240px the 01–04 numbers drop out to make room.
+- **2026-10-22:** The big gradient numbers (58%, 36%, 68%) no longer get clipped along the top.

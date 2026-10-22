@@ -210,7 +210,8 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .num { font-weight: 500; line-height: 1.25; text-box: trim-both cap alphabetic; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
 .num--xl { font-size: clamp(64px, 6.67vw, 96px); }
 .num--lg { font-size: clamp(48px, 4.45vw, 64px); }
-.num--grad { background: var(--grad-num); -webkit-background-clip: text; background-clip: text; color: transparent; padding-bottom: 0.04em; }
+/* gradient text only paints inside its box, so extend the box past the trimmed line (no layout change) */
+.num--grad { background: var(--grad-num); -webkit-background-clip: text; background-clip: text; color: transparent; padding-block: 0.2em; margin-block: -0.2em; }
 
 /* Share row: divider + Share button + source stamp */
 .share-row { display: flex; align-items: center; gap: 24px; width: 100%; padding-top: 24px; border-top: 1px solid var(--rule); }
