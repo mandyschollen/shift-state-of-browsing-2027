@@ -1,0 +1,55 @@
+/*
+  Design tokens for THIS prototype only, from the Shift Design System 2.0 Figma file
+  (zBPdqo3KdG4gsc62BaiFyq, Colour + Typography pages).
+  Fonts are self-hosted in brands/shift/fonts/ (Geist, Geist Mono) and linked from index.html.
+*/
+
+:root {
+  /* Neutrals */
+  --color-ink: #0c0910;          /* colour/neutral/black */
+  --color-neutral-900: #24272f;
+  --color-neutral-800: #31353f;
+  --color-neutral-700: #52596b;
+  --color-neutral-600: #646d82;
+  --color-neutral-500: #727c95;
+  --color-neutral-400: #9da3b2;
+  --color-neutral-300: #c0c5d2;
+  --color-neutral-200: #d2d7e1;
+  --color-neutral-100: #ecedf1;
+  --color-neutral-50: #f2f4f8;
+
+  /* Primary / Blue */
+  --color-blue-900: #2d409d;
+  --color-blue-800: #4b60c5;
+  --color-blue-700: #4f72d8;
+  --color-blue-600: #5484ed;
+  --color-blue-500: #5693fc;
+  --color-blue-400: #71a6ff;
+  --color-blue-300: #85bcff;
+  --color-blue-200: #9bc9ff;
+  --color-blue-100: #c1ddff;
+  --color-blue-50: #e5f2ff;
+
+  /* Secondary / Cyan */
+  --color-cyan-700: #0090b0;
+  --color-cyan-500: #00b4de;
+  --color-cyan-200: #67daf4;
+  --color-cyan-100: #a8e9f8;
+  --color-cyan-50: #ddf6fd;
+
+  --color-yellow-50: #fff8e4;
+
+  /* Type */
+  --font-sans: "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  /* Radius / spacing */
+  --radius-sm: 8px;
+  --radius-lg: 24px;
+  --spacing-gutter: 120px;   /* padding */
+  --container-inner: 1200px; /* width/inner/full */
+
+  /* Shadows (Shadow/sm, Shadow/md) */
+  --shadow-sm: 0 1px 8px 0 rgb(86 147 252 / 0.4);
+  --shadow-md: 0 1px 16px 0 rgb(86 147 252 / 0.5);
+}
