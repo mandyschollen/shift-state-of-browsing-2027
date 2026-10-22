@@ -17,7 +17,7 @@
     requestAnimationFrame(step);
   }
 
-  // ---------- Reveal (once): fade up, then charts fill and numbers count ----------
+  // ---------- Reveal: fade up, then charts fill and numbers count (reset when a chapter closes) ----------
   var io = new IntersectionObserver(function (entries) {
     entries.forEach(function (e) {
       if (!e.isIntersecting) return;
@@ -36,6 +36,15 @@
     btn.setAttribute('aria-expanded', String(open));
     btn.querySelector('.toggle__label').textContent = open ? 'Collapse insights' : 'Expand insights';
     body.inert = !open;
+    // once the chapter has finished closing, reset its stats so they animate again next time it opens
+    clearTimeout(chapter._resetTimer);
+    if (!open) chapter._resetTimer = setTimeout(function () {
+      if (chapter.classList.contains('is-open')) return;
+      body.querySelectorAll('[data-reveal]').forEach(function (el) {
+        el.classList.remove('is-in');
+        io.observe(el);
+      });
+    }, 750);
   }
   document.querySelectorAll('[data-chapter]').forEach(function (chapter) {
     chapter.querySelector('[data-toggle]').addEventListener('click', function () {

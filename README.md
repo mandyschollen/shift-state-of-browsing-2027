@@ -15,7 +15,7 @@ Open `index.html` in a browser by double-clicking it. You don't need a build ste
   2. Digital burnout: burnout donut, 4-in-10 tabs, gauges (20%, 43%)
   3. Privacy & control: decision drivers, top frustrations, control and AI-concern stats
   4. What we want from AI: AI adoption by age, practical AI uses, opt-in preferences
-- **Stat cards:** every stat has a Share button and the "shift.com/state-of-browsing · The 2027 State of Browsing Report" stamp. Charts animate in on scroll: bars grow, gauges and the donut sweep round, and numbers count up.
+- **Stat cards:** every stat has a Share button and the "shift.com/state-of-browsing · The 2027 State of Browsing Report" stamp. Charts animate in on scroll: bars grow, gauges and the donut sweep round, and numbers count up. They replay every time a chapter is reopened.
 - **End of the page:** the "Reimagine your browser" CTA and the shift.com footer.
 
 ## Sources
@@ -42,3 +42,4 @@ This copy lives on Mandy's personal GitHub. The original is in the team sandbox 
 - **2026-10-22:** Standalone copy made for this repository: plain CSS with no build step, and fonts bundled.
 - **2026-10-22:** Nav chapters now softly fade in (staggered, with a small lift) instead of flying up from the chapter row.
 - **2026-10-22:** There's no nav over the hero: the Shift logo sits centred above the title, 80px from the top, and the whole nav fades in once you scroll past the chapter row. The hero light leak stretches full width on large screens. Open chapters grow to the full screen width, and neighbouring open chapters share one divider line.
+- **2026-10-22:** Stats re-animate every time a chapter is reopened.
