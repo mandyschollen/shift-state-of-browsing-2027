@@ -111,10 +111,18 @@
     b.addEventListener('click', function () {
       var text = b.dataset.share + ' From The 2027 State of Browsing Report by Shift.';
       var url = base + '#' + b.dataset.anchor;
-      if (navigator.share) { navigator.share({ title: 'The 2027 State of Browsing Report', text: text, url: url }).catch(function () {}); return; }
-      (navigator.clipboard ? navigator.clipboard.writeText(text + ' ' + url) : Promise.reject())
-        .then(function () { say('Stat copied — paste it anywhere'); })
-        .catch(function () { say('Copy this link: ' + url); });
+      function copy() {
+        (navigator.clipboard ? navigator.clipboard.writeText(text + ' ' + url) : Promise.reject())
+          .then(function () { say('Stat copied — paste it anywhere'); })
+          .catch(function () { say('Copy this link: ' + url); });
+      }
+      // share sheet where the browser allows it; if it's refused (not just cancelled), copy instead
+      if (navigator.share) {
+        navigator.share({ title: 'The 2027 State of Browsing Report', text: text, url: url })
+          .catch(function (err) { if (!err || err.name !== 'AbortError') copy(); });
+        return;
+      }
+      copy();
     });
   });
 

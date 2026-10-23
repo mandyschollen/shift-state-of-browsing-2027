@@ -50,3 +50,4 @@ This copy lives on Mandy's personal GitHub. The original is in the team sandbox 
 - **2026-10-22:** The big gradient numbers (58%, 36%, 68%) no longer get clipped along the top.
 - **2026-10-22:** Applied Mandy's Figma edits (Shift Website WIP, section 'SOB 2027' 25216:13050): smaller split-card numbers (48px) and light-blue 14px bar labels; chapter 3 decision drivers and chapter 4 AI adoption as glowing bubbles with colour legends; 'The Top 3' panel list; big-title AI concerns and practical-uses cards; new 'Nearly 3 in 5' dots card; opt-in gauges now 32% and 22%.
 - **2026-10-22:** Stat animations replay every time a card scrolls into view, not just when its chapter is reopened.
+- **2026-10-22:** Shareable link published: https://claude.ai/artifact/DGF65qNkmxzN3GCW3HZQgK. Share buttons now copy the stat when a browser refuses the share sheet.
