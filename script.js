@@ -17,15 +17,21 @@
     requestAnimationFrame(step);
   }
 
-  // ---------- Reveal: fade up, then charts fill and numbers count (reset when a chapter closes) ----------
+  // ---------- Reveal: fade up, then charts fill and numbers count ----------
+  // Plays every time a stat comes into view; once it has fully left the screen
+  // (scrolled away, or its chapter closed) it quietly resets so it can play again.
   var io = new IntersectionObserver(function (entries) {
     entries.forEach(function (e) {
-      if (!e.isIntersecting) return;
-      e.target.classList.add('is-in');
-      e.target.querySelectorAll('[data-count]').forEach(countUp);
-      io.unobserve(e.target);
+      var el = e.target;
+      if (e.isIntersecting && e.intersectionRatio >= 0.25) {
+        if (el.classList.contains('is-in')) return;
+        el.classList.add('is-in');
+        el.querySelectorAll('[data-count]').forEach(countUp);
+      } else if (!e.isIntersecting) {
+        el.classList.remove('is-in');
+      }
     });
-  }, { threshold: 0.25 });
+  }, { threshold: [0, 0.25] });
   document.querySelectorAll('[data-reveal]').forEach(function (el) { io.observe(el); });
 
   // ---------- Expand / collapse chapters ----------
@@ -36,15 +42,6 @@
     btn.setAttribute('aria-expanded', String(open));
     btn.querySelector('.toggle__label').textContent = open ? 'Collapse insights' : 'Expand insights';
     body.inert = !open;
-    // once the chapter has finished closing, reset its stats so they animate again next time it opens
-    clearTimeout(chapter._resetTimer);
-    if (!open) chapter._resetTimer = setTimeout(function () {
-      if (chapter.classList.contains('is-open')) return;
-      body.querySelectorAll('[data-reveal]').forEach(function (el) {
-        el.classList.remove('is-in');
-        io.observe(el);
-      });
-    }, 750);
   }
   document.querySelectorAll('[data-chapter]').forEach(function (chapter) {
     chapter.querySelector('[data-toggle]').addEventListener('click', function () {
