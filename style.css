@@ -174,7 +174,7 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
   background: var(--ink-75); border: 2px solid var(--blue);
 }
 .card--feature-tall { min-height: 472px; }
-.card--feature .card__text { width: min(451px, 100%); flex: none; }
+.card--feature .card__text { flex: 0 1 451px; min-width: 280px; } /* gives way to the graphic on narrower screens */
 .card__glow { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
 
 /* Split card — hairline border (Figma 1545:39856, 1554:40977) */
@@ -203,13 +203,13 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
   .card--feature > :last-child { align-self: center; }
   .card--split > *, .card--split > .card__text--fixed { flex: none; }
   .card--split .tens { flex: none !important; width: min(100% + 18px, 470px); max-width: none; margin: -9px auto; }
-  .card--feature .card__text { width: 100%; }
+  .card--feature .card__text { flex: none; width: 100%; min-width: 0; }
 }
 
 /* Numbers */
 .num { font-weight: 500; line-height: 1.25; text-box: trim-both cap alphabetic; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
 .num--xl { font-size: clamp(64px, 6.67vw, 96px); }
-.num--lg { font-size: clamp(48px, 4.45vw, 64px); }
+.num--lg { font-size: clamp(40px, 3.34vw, 48px); }
 /* gradient text only paints inside its box, so extend the box past the trimmed line (no layout change) */
 .num--grad { background: var(--grad-num); -webkit-background-clip: text; background-clip: text; color: transparent; padding-block: 0.2em; margin-block: -0.2em; }
 
@@ -238,7 +238,7 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 }
 .is-in .bar i { width: var(--w); }
 .bar b { position: absolute; right: 18px; top: 50%; transform: translateY(-50%); font-weight: 500; font-size: 24px; line-height: 1; letter-spacing: -0.02em; }
-.bar-item p { font-weight: 500; font-size: 16px; line-height: 1.25; letter-spacing: -0.02em; }
+.bar-item p { font-weight: 600; font-size: 14px; line-height: 1.5; color: var(--brand-text); }
 .bars .bar-item:nth-child(2) i { transition-delay: 120ms; }
 .bars .bar-item:nth-child(3) i { transition-delay: 240ms; }
 .bars .bar-item:nth-child(4) i { transition-delay: 360ms; }
@@ -326,17 +326,47 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .ranked { display: flex; flex-direction: column; }
 .ranked li { display: flex; align-items: baseline; gap: 20px; padding: 20px 0; border-bottom: 1px solid var(--rule); font-weight: 500; font-size: 24px; letter-spacing: -0.02em; }
 .ranked li span { font-family: var(--font-mono); font-size: 14px; color: var(--brand-text); }
-.cols { position: relative; flex: 0 1 451px; height: 274px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; align-items: end; padding-bottom: 28px; }
-.col { position: relative; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; gap: 12px; }
-.col b { font-weight: 500; font-size: 24px; letter-spacing: -0.02em; }
-.col i {
-  width: 100%; max-width: 96px; height: 0; border-radius: 8px;
-  background: url("./assets/bar-noise.png") 0 0 / 512px 512px, var(--grad-bar); background-blend-mode: soft-light, normal;
-  transition: height 1.2s var(--ease-out);
+
+/* ---------- Bubbles (Figma: decision drivers, AI adoption) ---------- */
+/* Bubble layout comes straight from Figma (px values as unitless numbers); the whole graphic scales to fit its card */
+.bubbles { position: relative; flex: 0 1 calc(var(--w) * 1px); min-width: 0; width: 100%; max-width: calc(var(--w) * 1px); aspect-ratio: var(--w) / var(--h); container-type: inline-size; }
+.bubbles--drivers { --w: 340.6; --h: 363.5; }
+.bubbles--adoption { --w: 428.3; --h: 372.7; }
+.bubble {
+  position: absolute; aspect-ratio: 1; width: calc(var(--d) / var(--w) * 100%);
+  left: calc((var(--x) - var(--d) / 2) / var(--w) * 100%); top: calc((var(--y) - var(--d) / 2) / var(--h) * 100%);
+  display: grid; place-items: center;
+  opacity: 0; transform: scale(0.6);
+  transition: opacity 300ms ease, transform 700ms cubic-bezier(0.34, 1.56, 0.64, 1);
 }
-.is-in .col i { height: calc(var(--h) * 0.72); }
-.col:nth-child(2) i { transition-delay: 120ms; } .col:nth-child(3) i { transition-delay: 240ms; }
-.col span { position: absolute; bottom: -28px; font-family: var(--font-mono); font-size: 13px; color: var(--text-3); }
+.bubble--1 { --c: 75 96 197; }   /* Blue/800 */
+.bubble--2 { --c: 86 147 252; }  /* Blue/500 */
+.bubble--3 { --c: 155 201 255; } /* Blue/200 */
+/* fill + glow at 75% opacity, then a 1px→2px blue→cyan outline at 50% */
+.bubble::before { content: ""; position: absolute; inset: 0; border-radius: 50%; background: rgb(var(--c) / 0.7); box-shadow: 0 0 8px 2px rgb(86 147 252 / 0.5); opacity: 0.75; }
+.bubble::after {
+  content: ""; position: absolute; inset: 0; border-radius: 50%; padding: 2px; opacity: 0.375;
+  background: linear-gradient(95.7deg, #5693fc, #67daf4);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor;
+          mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+}
+.bubble > span { position: relative; z-index: 1; font-weight: 500; font-size: min(48px, calc(48 / var(--w) * 100cqw)); line-height: 1.25; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+.is-in .bubble { opacity: 1; transform: none; }
+.is-in .bubble:nth-child(2) { transition-delay: 140ms; }
+.is-in .bubble:nth-child(3) { transition-delay: 280ms; }
+
+/* ---------- Split-card variants ---------- */
+.card__title-xl { max-width: 342px; font-weight: 500; font-size: clamp(36px, 3.34vw, 48px); line-height: 1.25; letter-spacing: -0.02em; }
+.card--split > .card__text--spread { align-self: stretch; justify-content: space-between; }
+.card--split > .card__text--narrow { flex: 0 1 410px; }
+.ranked--panel { align-self: center; gap: 24px; padding: 40px; border-radius: 16px; background: rgb(36 39 47 / 0.8); }
+.ranked--panel li { padding: 0; border: 0; }
+.ranked--panel li span { font-size: 24px; font-weight: 500; }
+
+/* ---------- Nearly 3 in 5: 5 dots, 3 lit (Figma 25216:15275) ---------- */
+.fives { flex: 0 1 345px !important; min-width: 0; max-width: 345px; display: flex; flex-wrap: wrap; justify-content: center; gap: 20px 20.5px; padding: 9px; margin: -9px; }
+.fives .dot { width: calc((100% - 41px) / 3); }
+@media (max-width: 899px) { .card--split .fives { flex: none !important; width: min(100% + 18px, 363px); margin: -9px auto; } }
 
 /* ---------- Subhead / pair / closing ---------- */
 .subhead { display: flex; flex-direction: column; gap: 16px; padding: 0 clamp(0px, 8.33vw, 120px); text-align: center; }
@@ -422,5 +452,5 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 [data-reveal].is-in { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) {
   [data-reveal] { opacity: 1; transform: none; transition: none; }
-  .bar i, .col i, .gauge__arc circle, .chrome-ring__arc, .chrome-ring__logo, .donut, .dot { transition: none !important; }
+  .bar i, .col i, .gauge__arc circle, .chrome-ring__arc, .chrome-ring__logo, .donut, .dot, .bubble { transition: none !important; }
 }

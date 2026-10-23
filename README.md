@@ -13,8 +13,8 @@ Open `index.html` in a browser by double-clicking it. You don't need a build ste
 - **Four chapters:** collapsible cards. *Expand insights* opens each chapter's stat cards.
   1. Browser loyalty: Chrome market-share ring (58%), familiarity bars (90%, 25%, 38%), gauges (54%, 32%)
   2. Digital burnout: burnout donut, 4-in-10 tabs, gauges (20%, 43%)
-  3. Privacy & control: decision drivers, top frustrations, control and AI-concern stats
-  4. What we want from AI: AI adoption by age, practical AI uses, opt-in preferences
+  3. Privacy & control: decision-driver bubbles (36%, 33%, 32%), The Top 3 frustrations, gauges (64%, 48%, 80%, 34%), AI-concern bars
+  4. What we want from AI: AI adoption bubbles by age (80%, 76%, 50%), practical AI uses, Nearly 3 in 5 dots, gauges (32%, 22%)
 - **Stat cards:** every stat has a Share button and the "shift.com/state-of-browsing · The 2027 State of Browsing Report" stamp. Charts animate in on scroll: bars grow, gauges and the donut sweep round, and numbers count up. They replay every time a chapter is reopened.
 - **End of the page:** the "Reimagine your browser" CTA and the shift.com footer.
 
@@ -48,3 +48,4 @@ This copy lives on Mandy's personal GitHub. The original is in the team sandbox 
 - **2026-10-22:** 4-in-10 dots rebuilt as 10 separate circles (same colours, outline and glow as Figma). They pop in one by one and shrink to fit smaller screens instead of being cut off. Stacked cards on phones no longer leave a gap.
 - **2026-10-22:** Nav chapter titles are never cut off: chips stay equal width when there's room but never shrink below their title; between 1100 and 1240px the 01–04 numbers drop out to make room.
 - **2026-10-22:** The big gradient numbers (58%, 36%, 68%) no longer get clipped along the top.
+- **2026-10-22:** Applied Mandy's Figma edits (Shift Website WIP, section 'SOB 2027' 25216:13050): smaller split-card numbers (48px) and light-blue 14px bar labels; chapter 3 decision drivers and chapter 4 AI adoption as glowing bubbles with colour legends; 'The Top 3' panel list; big-title AI concerns and practical-uses cards; new 'Nearly 3 in 5' dots card; opt-in gauges now 32% and 22%.
