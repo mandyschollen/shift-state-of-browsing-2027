@@ -364,9 +364,9 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .ranked--panel li span { font-size: 24px; font-weight: 500; }
 
 /* ---------- Nearly 3 in 5: 5 dots, 3 lit (Figma 25216:15275) ---------- */
-.fives { flex: 0 1 345px !important; min-width: 0; max-width: 345px; display: flex; flex-wrap: wrap; justify-content: center; gap: 20px 20.5px; padding: 9px; margin: -9px; }
+.fives { flex: 0 1 345px !important; min-width: 0; max-width: 345px; display: flex; flex-wrap: wrap; justify-content: center; gap: 20px 20.5px; padding: 9px; margin: -9px -9px -9px auto; } /* pushed to the right edge, as in Figma (space-between) */
 .fives .dot { width: calc((100% - 41px) / 3); }
-@media (max-width: 899px) { .card--split .fives { flex: none !important; width: min(100% + 18px, 363px); margin: -9px auto; } }
+@media (max-width: 899px) { .card--split .fives { flex: none !important; width: 100%; max-width: 363px; margin: 0 auto; } }
 
 /* ---------- Subhead / pair / closing ---------- */
 .subhead { display: flex; flex-direction: column; gap: 16px; padding: 0 clamp(0px, 8.33vw, 120px); text-align: center; }
