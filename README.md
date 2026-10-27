@@ -18,6 +18,11 @@ Open `index.html` in a browser by double-clicking it. You don't need a build ste
 - **Stat cards:** every stat has a Share button and the "shift.com/state-of-browsing · The 2027 State of Browsing Report" stamp. Charts animate in on scroll: bars grow, gauges and the donut sweep round, and numbers count up. They replay every time a stat scrolls back into view (and when a chapter is reopened).
 - **End of the page:** the "Reimagine your browser" CTA and the shift.com footer.
 
+## Versions
+
+- `index.html` (repo root): the version on the shared link, https://claude.ai/artifact/DGF65qNkmxzN3GCW3HZQgK
+- `edits/`: Mandy's "2027 - edits" Figma updates (Shift Website WIP 25228:59507), privately previewed at https://claude.ai/artifact/J91VKrm5qStunk1FTBHFEq. Open `edits/index.html` the same way.
+
 ## Sources
 
 - **Design:** Figma, Shift Website (WIP), Section 2. https://www.figma.com/design/yRiTzEUObUFSjSJbxfKknY/Shift-Website--WIP-?node-id=25202-12440
@@ -52,3 +57,4 @@ This copy lives on Mandy's personal GitHub. The original is in the team sandbox 
 - **2026-10-22:** Stat animations replay every time a card scrolls into view, not just when its chapter is reopened.
 - **2026-10-22:** Shareable link published: https://claude.ai/artifact/DGF65qNkmxzN3GCW3HZQgK. Share buttons now copy the stat when a browser refuses the share sheet.
 - **2026-10-22:** "Nearly 3 in 5" dots sit against the card's right edge on desktop (as in Figma) and are centred on tablet and phone.
+- **2026-10-27:** New `edits/` copy with the "2027 - edits" Figma updates: labelled thin bars, a 58% ring with the number inside (no Chrome logo), new lit/unlit dots, the donut and bubble cards with legends above the charts, solid-colour bubbles in the new layouts, updated chapter 3 and 4 copy, chapter 4 re-ordered, plus new Summary, "Download the report" email form and About sections with popping circle clusters. Same animations as before. Private preview link: https://claude.ai/artifact/J91VKrm5qStunk1FTBHFEq

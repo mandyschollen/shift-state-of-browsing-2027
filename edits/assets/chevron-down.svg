@@ -1,0 +1,11 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="chevron-down">
+<path id="Vector" d="M15.25 10.75L12 14.25L8.75 10.75" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke="url(#paint0_linear_0_129)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_129" x1="8.95968" y1="10.75" x2="15.667" y2="11.9844" gradientUnits="userSpaceOnUse">
+<stop stop-color="#5693FC"/>
+<stop offset="1" stop-color="#67DAF4"/>
+</linearGradient>
+</defs>
+</svg>
