@@ -22,6 +22,7 @@ Open `index.html` in a browser by double-clicking it. You don't need a build ste
 
 - `index.html` (repo root): the version on the shared link, https://claude.ai/artifact/DGF65qNkmxzN3GCW3HZQgK
 - `edits/`: Mandy's "2027 - edits" Figma updates (Shift Website WIP 25228:59507), privately previewed at https://claude.ai/artifact/J91VKrm5qStunk1FTBHFEq. Open `edits/index.html` the same way.
+- `endings-mockup/`: the edits version with a proposed Summary and About layout (lead paragraph plus two cards with animated mini-browser graphics, and survey cards for About). Private preview: https://claude.ai/artifact/NMNqFrjVnAmeDK5XoBF2EG
 
 ## Sources
 
@@ -58,3 +59,4 @@ This copy lives on Mandy's personal GitHub. The original is in the team sandbox 
 - **2026-10-22:** Shareable link published: https://claude.ai/artifact/DGF65qNkmxzN3GCW3HZQgK. Share buttons now copy the stat when a browser refuses the share sheet.
 - **2026-10-22:** "Nearly 3 in 5" dots sit against the card's right edge on desktop (as in Figma) and are centred on tablet and phone.
 - **2026-10-27:** New `edits/` copy with the "2027 - edits" Figma updates: labelled thin bars, a 58% ring with the number inside (no Chrome logo), new lit/unlit dots, the donut and bubble cards with legends above the charts, solid-colour bubbles in the new layouts, updated chapter 3 and 4 copy, chapter 4 re-ordered, plus new Summary, "Download the report" email form and About sections with popping circle clusters. Same animations as before. Private preview link: https://claude.ai/artifact/J91VKrm5qStunk1FTBHFEq
+- **2026-10-30:** `endings-mockup/` copy: a proposed layout for the long Summary copy (first paragraph as a big lead beside a 'calmer browser slides in' graphic; the other two paragraphs in cards with an 'Ask first' assistant and an 'organized tabs' graphic) and an About section with animated survey cards and a 1,005 responses badge. The copy is unchanged. Private preview: https://claude.ai/artifact/NMNqFrjVnAmeDK5XoBF2EG
