@@ -26,7 +26,7 @@ Open `index.html` in a browser by double-clicking it. You don't need a build ste
 
 ## Sources
 
-- **Design:** Figma, Shift Website (WIP), Section 2. https://www.figma.com/design/yRiTzEUObUFSjSJbxfKknY/Shift-Website--WIP-?node-id=25202-12440
+- **Design:** Figma, State of browsing 2027. https://www.figma.com/design/xjDBKvs9LK1S1ttH7cKQcS/State-of-browsing-2027?node-id=94-3135
 - **Brand:** Shift Design System 2.0 (colours and typography). https://www.figma.com/design/zBPdqo3KdG4gsc62BaiFyq/Design-System-2.0
 - **Copy:** "State of Browsing 2027: Copy Draft" (Google Doc).
 - **Fonts:** Geist and Geist Mono, self-hosted in `assets/fonts/`.

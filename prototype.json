@@ -2,7 +2,7 @@
   "title": "Shift – 2027 State of Browsing (Mandy)",
   "brand": "shift",
   "description": "Mandy's design for the 2027 State of Browsing landing page, built from Figma. Dark Shift theme with the hero light leak, then four collapsible chapter cards (Browser loyalty, Digital burnout, Privacy & control, What we want from AI). The chapter row below the hero flies up into the nav once you scroll past it, and the nav chips highlight the chapter you're reading. 'Expand insights' opens each chapter's stat cards: a Chrome market-share ring, gradient bars, gauges, a burnout donut and 4-in-10 circles, all animating in on scroll with counting numbers. Every stat has a Share button and the report stamp. 'Reimagine your browser' CTA and the shift.com footer. Chapters 3 and 4 reuse the card styles from 1 and 2 (no expanded Figma yet).",
-  "figma": "https://www.figma.com/design/yRiTzEUObUFSjSJbxfKknY/Shift-Website--WIP-?node-id=25202-12440",
+  "figma": "https://www.figma.com/design/xjDBKvs9LK1S1ttH7cKQcS/State-of-browsing-2027?node-id=94-3135",
   "status": "wip",
   "updated": "2026-10-21"
 }
