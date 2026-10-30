@@ -16,11 +16,11 @@ Open `index.html` in a browser by double-clicking it. You don't need a build ste
   3. Privacy & control: decision-driver bubbles (36%, 33%, 32%), The Top 3 frustrations, gauges (64%, 48%, 80%, 34%), AI-concern bars
   4. What we want from AI: AI adoption bubbles by age (80%, 76%, 50%), practical AI uses, Nearly 3 in 5 dots, gauges (32%, 22%)
 - **Stat cards:** every stat has a Share button and the "shift.com/state-of-browsing · The 2027 State of Browsing Report" stamp. Charts animate in on scroll: bars grow, gauges and the donut sweep round, and numbers count up. They replay every time a stat scrolls back into view (and when a chapter is reopened).
-- **End of the page:** the "Reimagine your browser" CTA and the shift.com footer.
+- **End of the page:** Summary (lead paragraph with a shield graphic, plus two cards with an 'Ask first' assistant and Privacy / Transparency / Permissions chips), the "Download the report" email form, About (survey cards with a 1,000+ badge), the "Reimagine your browser" CTA and the shift.com footer.
 
 ## Versions
 
-- `index.html` (repo root): the version on the shared link, https://claude.ai/artifact/DGF65qNkmxzN3GCW3HZQgK
+- `index.html` (repo root): the main version, matching the State of browsing 2027 Figma board (94:3135). It's on the shared link, https://claude.ai/artifact/DGF65qNkmxzN3GCW3HZQgK
 - `edits/`: Mandy's "2027 - edits" Figma updates (Shift Website WIP 25228:59507), privately previewed at https://claude.ai/artifact/J91VKrm5qStunk1FTBHFEq. Open `edits/index.html` the same way.
 - `endings-mockup/`: the edits version with a proposed Summary and About layout (lead paragraph plus two cards with animated mini-browser graphics, and survey cards for About). Private preview: https://claude.ai/artifact/NMNqFrjVnAmeDK5XoBF2EG
 
@@ -60,3 +60,4 @@ This copy lives on Mandy's personal GitHub. The original is in the team sandbox 
 - **2026-10-22:** "Nearly 3 in 5" dots sit against the card's right edge on desktop (as in Figma) and are centred on tablet and phone.
 - **2026-10-27:** New `edits/` copy with the "2027 - edits" Figma updates: labelled thin bars, a 58% ring with the number inside (no Chrome logo), new lit/unlit dots, the donut and bubble cards with legends above the charts, solid-colour bubbles in the new layouts, updated chapter 3 and 4 copy, chapter 4 re-ordered, plus new Summary, "Download the report" email form and About sections with popping circle clusters. Same animations as before. Private preview link: https://claude.ai/artifact/J91VKrm5qStunk1FTBHFEq
 - **2026-10-30:** `endings-mockup/` copy: a proposed layout for the long Summary copy (first paragraph as a big lead beside a 'calmer browser slides in' graphic; the other two paragraphs in cards with an 'Ask first' assistant and an 'organized tabs' graphic) and an About section with animated survey cards and a 1,005 responses badge. The copy is unchanged. Private preview: https://claude.ai/artifact/NMNqFrjVnAmeDK5XoBF2EG
+- **2026-10-30:** The main version now matches the new State of browsing 2027 Figma board (94:3135): it's built on the endings mockup, with the Figma Summary graphics (shield with a question mark between tabs and AI circles, an 'Ask first' assistant with a lock, AI sparkle with Privacy / Transparency / Permissions chips) and the About survey cards (back cards fan out from behind, the chosen answer ticks, 1,000+ badge counts up, clipboard circle). Chapter 1's closing line was removed as in Figma. Graphics scale down to fit phones. Shared link updated.

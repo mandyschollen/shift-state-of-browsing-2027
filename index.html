@@ -28,7 +28,7 @@
         <a class="chip" href="#privacy" data-chapter-link tabindex="-1"><span>03</span>Privacy &amp; control</a>
         <a class="chip" href="#ai" data-chapter-link tabindex="-1"><span>04</span>What we want from AI</a>
       </div>
-      <a class="btn btn--white btn--sm" href="#">Download PDF</a>
+      <a class="btn btn--white btn--sm" href="#download">Download PDF</a>
     </nav>
   </header>
 
@@ -42,7 +42,7 @@
         <h1 class="hero__title">The 2027 State of<br>Browsing Report</h1>
         <p class="hero__sub">We asked 1,000 internet users in the US how they felt about their browser, AI, and digital fatigue. Here’s what we found.</p>
         <div class="hero__cta">
-          <a class="btn btn--white btn--lg" href="#">Download PDF</a>
+          <a class="btn btn--white btn--lg" href="#download">Download PDF</a>
           <a class="hero__hint" href="#chapters">Or keep scrolling ↓</a>
         </div>
       </div>
@@ -74,16 +74,15 @@
             <!-- 58% — Figma 1545:39258 -->
             <article class="card card--feature" id="stat-chrome-share" data-reveal>
               <img class="card__glow" src="assets/card-glow.png" alt="" aria-hidden="true">
-              <div class="card__text">
-                <p class="num num--xl num--grad"><span data-count="58">58</span>%</p>
-                <h3 class="card__lead">Google Chrome takes massive market share as the primary desktop browser for 58% of US users</h3>
+              <div class="card__text card__text--spread">
+                <h3 class="card__lead card__lead--lg">Google Chrome takes massive market share as the primary desktop browser for 58% of US users</h3>
                 <div class="share-row"><button class="share" type="button" data-share="Google Chrome is the primary desktop browser for 58% of US users." data-anchor="stat-chrome-share"><img src="assets/share.svg" width="24" height="24" alt="">Share</button><p class="share-row__src"><span>shift.com/state-of-browsing</span><span>The 2027 State of Browsing Report</span></p></div>
               </div>
               <div class="chrome-ring" aria-hidden="true">
                 <img class="chrome-ring__track" src="assets/chrome-ring-track.svg" width="272.634" height="272.634" alt="">
                 <img class="chrome-ring__union" src="assets/chrome-ring-union.png" width="274.029" height="274.029" alt="">
-                <img class="chrome-ring__arc" src="assets/chrome-ring-arc.svg" width="208.855" height="274.216" alt="">
-                <div class="chrome-ring__logo"><img src="assets/chrome-dock.png" width="1339.197" height="539.147" alt=""></div>
+                <img class="chrome-ring__arc" src="assets/chrome-ring-arc-soft.png" width="208.855" height="274.216" alt="">
+                <p class="chrome-ring__num"><span data-count="58">58</span>%</p>
               </div>
             </article>
 
@@ -98,8 +97,8 @@
                 <div class="share-row"><button class="share" type="button" data-share="A whopping 90% of people were familiar with Google Chrome. But familiarity isn't the same as loyalty." data-anchor="stat-familiar"><img src="assets/share.svg" width="24" height="24" alt="">Share</button><p class="share-row__src"><span>shift.com/state-of-browsing</span><span>The 2027 State of Browsing Report</span></p></div>
               </div>
               <div class="bars">
-                <div class="bar-item"><div class="bar" style="--w:25%"><i></i><b>25%</b></div><p>Use Chrome because it came pre-installed</p></div>
-                <div class="bar-item"><div class="bar" style="--w:38%"><i></i><b>38%</b></div><p>Have simply used it for years without a second thought</p></div>
+                <div class="bar-item"><p><b><span data-count="25">25</span>%</b> Use Chrome because it came pre-installed</p><div class="bar" style="--w:25%"><i></i></div></div>
+                <div class="bar-item"><p><b><span data-count="38">38</span>%</b> Have simply used it for years without a second thought</p><div class="bar" style="--w:38%"><i></i></div></div>
               </div>
             </article>
 
@@ -119,7 +118,6 @@
               </article>
             </div>
 
-            <p class="closing">It looks like Google will continue to dominate the browser space in 2027, but what will it take to get users to make the switch?</p>
           </div>
         </div>
       </section>
@@ -138,20 +136,22 @@
           <div class="chapter__body" inert>
 
             <!-- Burnout donut — Figma 1554:40930 -->
-            <article class="card card--feature card--feature-tall" id="stat-burnout" data-reveal>
+            <article class="card card--feature card--feature-tall card--burnout" id="stat-burnout" data-reveal>
               <img class="card__glow card__glow--tall" src="assets/card-glow-tall.png" alt="" aria-hidden="true">
-              <div class="card__text">
+              <div class="card__text card__text--spread">
                 <h3 class="card__lead card__lead--lg">More than half of Americans experience digital burnout</h3>
-                <ul class="legend">
-                  <li><img src="assets/legend-very-often.svg" width="19.453" height="19.453" alt="">12% very often</li>
-                  <li><img src="assets/legend-often.svg" width="19.453" height="19.453" alt="">17% often</li>
-                  <li><img src="assets/legend-sometimes.svg" width="19.453" height="19.453" alt="">34% sometimes</li>
-                  <li><img src="assets/legend-rarely.svg" width="19.453" height="19.453" alt="">24% rarely</li>
-                  <li><img src="assets/legend-never.svg" width="19.453" height="19.453" alt="">13% never</li>
-                </ul>
                 <div class="share-row"><button class="share" type="button" data-share="More than half of Americans experience digital burnout." data-anchor="stat-burnout"><img src="assets/share.svg" width="24" height="24" alt="">Share</button><p class="share-row__src"><span>shift.com/state-of-browsing</span><span>The 2027 State of Browsing Report</span></p></div>
               </div>
-              <img class="donut" src="assets/burnout-donut.svg" width="274" height="274" alt="" aria-hidden="true">
+              <div class="card__graphic">
+                <ul class="legend legend--grid3">
+                  <li><i style="--c:#31353f"></i>12% very often</li>
+                  <li><i style="--c:#727c95"></i>17% often</li>
+                  <li><i style="--c:#9bc9ff"></i>34% sometimes</li>
+                  <li><i style="--c:#71a6ff"></i>24% rarely</li>
+                  <li><i style="--c:#4f72d8"></i>13% never</li>
+                </ul>
+                <img class="donut" src="assets/burnout-donut.svg" width="309" height="309" alt="" aria-hidden="true">
+              </div>
             </article>
 
             <!-- 4 in 10 — Figma 1554:40977 -->
@@ -201,19 +201,21 @@
         <div class="chapter__drawer" id="ch3-body" data-drawer>
           <div class="chapter__body" inert>
 
-            <article class="card card--feature card--feature-tall" id="stat-drivers" data-reveal>
+            <article class="card card--feature card--feature-tall card--bubbles" id="stat-drivers" data-reveal>
               <img class="card__glow card__glow--tall" src="assets/card-glow-tall.png" alt="" aria-hidden="true">
-              <div class="card__text">
+              <div class="card__text card__text--spread">
                 <h3 class="card__lead card__lead--lg">Across all demographics, privacy and security rank as the top decision-driver for choosing a browser</h3>
-                <ul class="legend"><li><img src="assets/legend-blue-1.svg" width="19.453" height="19.453" alt="">Privacy and security</li><li><img src="assets/legend-blue-2.svg" width="19.453" height="19.453" alt="">Compatibility with other apps</li><li><img src="assets/legend-blue-3.svg" width="19.453" height="19.453" alt="">Speed</li></ul>
                 <div class="share-row"><button class="share" type="button" data-share="Across all demographics, privacy and security rank as the top decision-driver for choosing a browser." data-anchor="stat-drivers"><img src="assets/share.svg" width="24" height="24" alt="">Share</button><p class="share-row__src"><span>shift.com/state-of-browsing</span><span>The 2027 State of Browsing Report</span></p></div>
               </div>
-              <div class="bubbles bubbles--drivers" aria-hidden="true"><div class="bubble bubble--1" style="--d:181;--x:250;--y:90"><span><span data-count="36">36</span>%</span></div><div class="bubble bubble--2" style="--d:166;--x:83;--y:170"><span><span data-count="33">33</span>%</span></div><div class="bubble bubble--3" style="--d:161;--x:230;--y:282"><span><span data-count="32">32</span>%</span></div></div>
+              <div class="card__graphic">
+                <ul class="legend legend--grid2"><li><i style="--c:#2d409d"></i>Privacy and security</li><li><i style="--c:#5484ed"></i>Compatibility with other apps</li><li><i style="--c:#85bcff"></i>Speed</li></ul>
+                <div class="bubbles bubbles--drivers" aria-hidden="true"><div class="bubble bubble--1" style="--d:181;--x:249.5;--y:90.5"><span><span data-count="36">36</span>%</span></div><div class="bubble bubble--2" style="--d:155.1;--x:77.55;--y:172.75"><span><span data-count="33">33</span>%</span></div><div class="bubble bubble--3" style="--d:159.9;--x:221.25;--y:278.55"><span><span data-count="32">32</span>%</span></div></div>
+              </div>
             </article>
 
             <article class="card card--split" id="stat-frustrations" data-reveal>
               <div class="card__text card__text--narrow">
-                <p class="num num--lg">The Top 3</p>
+                <p class="num num--lg">Top 3</p>
                 <h3 class="card__lead card__lead--sm">reported frustrations with browsers</h3>
                 <div class="share-row"><button class="share" type="button" data-share="The top 3 frustrations with browsers: slow performance, website tracking and unwanted features." data-anchor="stat-frustrations"><img src="assets/share.svg" width="24" height="24" alt="">Share</button><p class="share-row__src"><span>shift.com/state-of-browsing</span><span>The 2027 State of Browsing Report</span></p></div>
               </div>
@@ -245,25 +247,25 @@
                 <div class="share-row"><button class="share" type="button" data-share="45% are worried about AI in browsers accessing too much personal information." data-anchor="stat-ai-concerns"><img src="assets/share.svg" width="24" height="24" alt="">Share</button><p class="share-row__src"><span>shift.com/state-of-browsing</span><span>The 2027 State of Browsing Report</span></p></div>
               </div>
               <div class="bars">
-                <div class="bar-item"><div class="bar" style="--w:45%"><i></i><b>45%</b></div><p>Worried about AI accessing too much personal information</p></div>
-                <div class="bar-item"><div class="bar" style="--w:42%"><i></i><b>42%</b></div><p>Concerned about AI taking actions they didn’t intend</p></div>
-                <div class="bar-item"><div class="bar" style="--w:40%"><i></i><b>40%</b></div><p>Concerned about basic security</p></div>
-                <div class="bar-item"><div class="bar" style="--w:32%"><i></i><b>32%</b></div><p>Worry they’ll lose control over their browsing experience</p></div>
+                <div class="bar-item"><p><b><span data-count="45">45</span>%</b> Accessing too much personal information</p><div class="bar" style="--w:45%"><i></i></div></div>
+                <div class="bar-item"><p><b><span data-count="42">42</span>%</b> Taking actions users didn’t intend</p><div class="bar" style="--w:42%"><i></i></div></div>
+                <div class="bar-item"><p><b><span data-count="40">40</span>%</b> Basic security</p><div class="bar" style="--w:40%"><i></i></div></div>
+                <div class="bar-item"><p><b><span data-count="32">32</span>%</b> Losing control over browsing experience</p><div class="bar" style="--w:32%"><i></i></div></div>
               </div>
             </article>
 
-            <div class="subhead"><h3>18–24-year-olds are the outliers when it comes to browsers making decisions</h3></div>
+            <div class="subhead"><h3>18–24-year-olds are the outliers when it comes to browsers making decisions on their behalf</h3></div>
 
             <div class="pair">
               <article class="card card--gauge" id="stat-18-24-ai" data-reveal>
                 <div class="gauge" style="--p:80"><img class="gauge__disc" src="assets/gauge-disc.svg" width="205.695" height="205.695" alt=""><img class="gauge__track" src="assets/gauge-track.svg" width="205.776" height="205.776" alt=""><svg class="gauge__arc" viewBox="0 0 205.776 205.776" aria-hidden="true"><circle cx="102.888" cy="102.888" r="98.0735" pathLength="100"/></svg><p class="gauge__num"><span data-count="80">80</span>%</p></div>
-                <h3 class="card__lead card__lead--sm">of 18–24-year-olds have already used AI over search</h3>
-                <div class="share-row"><button class="share" type="button" data-share="80% of 18–24-year-olds have already used AI over search." data-anchor="stat-18-24-ai"><img src="assets/share.svg" width="24" height="24" alt="">Share</button><p class="share-row__src"><span>shift.com/state-of-browsing</span><span>The 2027 State of Browsing Report</span></p></div>
+                <h3 class="card__lead card__lead--sm">of 18–24-year-olds have used AI over traditional search</h3>
+                <div class="share-row"><button class="share" type="button" data-share="80% of 18–24-year-olds have used AI over traditional search." data-anchor="stat-18-24-ai"><img src="assets/share.svg" width="24" height="24" alt="">Share</button><p class="share-row__src"><span>shift.com/state-of-browsing</span><span>The 2027 State of Browsing Report</span></p></div>
               </article>
               <article class="card card--gauge" id="stat-18-24-open" data-reveal>
                 <div class="gauge" style="--p:34"><img class="gauge__disc" src="assets/gauge-disc.svg" width="205.695" height="205.695" alt=""><img class="gauge__track" src="assets/gauge-track.svg" width="205.776" height="205.776" alt=""><svg class="gauge__arc" viewBox="0 0 205.776 205.776" aria-hidden="true"><circle cx="102.888" cy="102.888" r="98.0735" pathLength="100"/></svg><p class="gauge__num"><span data-count="34">34</span>%</p></div>
-                <h3 class="card__lead card__lead--sm">are open to an AI-integrated browser making decisions on their behalf — the only cohort where a meaningful share is</h3>
-                <div class="share-row"><button class="share" type="button" data-share="34% of 18–24-year-olds are open to an AI-integrated browser making decisions on their behalf." data-anchor="stat-18-24-open"><img src="assets/share.svg" width="24" height="24" alt="">Share</button><p class="share-row__src"><span>shift.com/state-of-browsing</span><span>The 2027 State of Browsing Report</span></p></div>
+                <h3 class="card__lead card__lead--sm">are open to a browser making decisions on their behalf</h3>
+                <div class="share-row"><button class="share" type="button" data-share="34% of 18–24-year-olds are open to a browser making decisions on their behalf." data-anchor="stat-18-24-open"><img src="assets/share.svg" width="24" height="24" alt="">Share</button><p class="share-row__src"><span>shift.com/state-of-browsing</span><span>The 2027 State of Browsing Report</span></p></div>
               </article>
             </div>
           </div>
@@ -283,31 +285,17 @@
         <div class="chapter__drawer" id="ch4-body" data-drawer>
           <div class="chapter__body" inert>
 
-            <article class="card card--feature card--feature-tall" id="stat-ai-search" data-reveal>
+            <article class="card card--feature card--feature-tall card--bubbles" id="stat-ai-search" data-reveal>
               <img class="card__glow card__glow--tall" src="assets/card-glow-tall.png" alt="" aria-hidden="true">
-              <div class="card__text">
-                <p class="num num--xl num--grad"><span data-count="68">68</span>%</p>
-                <h3 class="card__lead">of Americans have used tools like ChatGPT or Perplexity instead of traditional search in the last 6 months</h3>
-                <ul class="legend"><li><img src="assets/legend-blue-1.svg" width="19.453" height="19.453" alt="">18 - 24</li><li><img src="assets/legend-blue-2.svg" width="19.453" height="19.453" alt="">35 - 44</li><li><img src="assets/legend-blue-3.svg" width="19.453" height="19.453" alt="">65+</li></ul>
+              <div class="card__text card__text--spread">
+                <h3 class="card__lead card__lead--lg">68% of Americans have used tools like ChatGPT or Perplexity instead of traditional search in the last 6 months</h3>
                 <div class="share-row"><button class="share" type="button" data-share="68% of Americans have used tools like ChatGPT or Perplexity instead of traditional search in the last 6 months." data-anchor="stat-ai-search"><img src="assets/share.svg" width="24" height="24" alt="">Share</button><p class="share-row__src"><span>shift.com/state-of-browsing</span><span>The 2027 State of Browsing Report</span></p></div>
               </div>
-              <div class="bubbles bubbles--adoption" aria-hidden="true"><div class="bubble bubble--1" style="--d:224.7;--x:112;--y:232"><span><span data-count="80">80</span>%</span></div><div class="bubble bubble--2" style="--d:213.4;--x:318;--y:107"><span><span data-count="76">76</span>%</span></div><div class="bubble bubble--3" style="--d:140.4;--x:303;--y:303"><span><span data-count="50">50</span>%</span></div></div>
-            </article>
-
-            <article class="card card--split" id="stat-capabilities" data-reveal>
-              <div class="card__text card__text--spread">
-                <h3 class="card__lead card__lead--lg">When asked which AI capabilities would make browsing easier, people chose use cases that were practical rather than autonomous</h3>
-                <div class="share-row"><button class="share" type="button" data-share="The AI capability people want most in a browser: researching a topic (35%)." data-anchor="stat-capabilities"><img src="assets/share.svg" width="24" height="24" alt="">Share</button><p class="share-row__src"><span>shift.com/state-of-browsing</span><span>The 2027 State of Browsing Report</span></p></div>
-              </div>
-              <div class="bars">
-                <div class="bar-item"><div class="bar" style="--w:35%"><i></i><b>35%</b></div><p>Researching a topic</p></div>
-                <div class="bar-item"><div class="bar" style="--w:28%"><i></i><b>28%</b></div><p>Finding previously viewed information</p></div>
-                <div class="bar-item"><div class="bar" style="--w:27%"><i></i><b>27%</b></div><p>Comparing information or products</p></div>
-                <div class="bar-item"><div class="bar" style="--w:25%"><i></i><b>25%</b></div><p>Summarizing multiple tabs</p></div>
+              <div class="card__graphic">
+                <ul class="legend legend--row"><li><i style="--c:#2d409d"></i>18 - 24</li><li><i style="--c:#5484ed"></i>35 - 44</li><li><i style="--c:#85bcff"></i>65+</li></ul>
+                <div class="bubbles bubbles--adoption" aria-hidden="true"><div class="bubble bubble--1" style="--d:219;--x:109.5;--y:230"><span><span data-count="80">80</span>%</span></div><div class="bubble bubble--2" style="--d:208;--x:315.3;--y:104"><span><span data-count="76">76</span>%</span></div><div class="bubble bubble--3" style="--d:137;--x:298.2;--y:298.5"><span><span data-count="50">50</span>%</span></div></div>
               </div>
             </article>
-
-            <div class="subhead"><h3>Helpful, but on our terms</h3></div>
 
             <article class="card card--split" id="stat-simpler" data-reveal>
               <div class="card__text card__text--fixed">
@@ -318,8 +306,22 @@
               <div class="fives" aria-hidden="true"><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot"></i><i class="dot"></i></div>
             </article>
 
+            <article class="card card--split" id="stat-capabilities" data-reveal>
+              <div class="card__text card__text--spread">
+                <h3 class="card__lead card__lead--lg">When asked which AI capabilities would make browsing easier, people chose use cases that were practical rather than autonomous</h3>
+                <div class="share-row"><button class="share" type="button" data-share="The AI capability people want most in a browser: researching a topic (35%)." data-anchor="stat-capabilities"><img src="assets/share.svg" width="24" height="24" alt="">Share</button><p class="share-row__src"><span>shift.com/state-of-browsing</span><span>The 2027 State of Browsing Report</span></p></div>
+              </div>
+              <div class="bars">
+                <div class="bar-item"><p><b><span data-count="35">35</span>%</b> Researching a topic</p><div class="bar" style="--w:35%"><i></i></div></div>
+                <div class="bar-item"><p><b><span data-count="28">28</span>%</b> Finding previously viewed information</p><div class="bar" style="--w:28%"><i></i></div></div>
+                <div class="bar-item"><p><b><span data-count="27">27</span>%</b> Comparing information or products</p><div class="bar" style="--w:27%"><i></i></div></div>
+                <div class="bar-item"><p><b><span data-count="25">25</span>%</b> Summarizing multiple tabs</p><div class="bar" style="--w:25%"><i></i></div></div>
+              </div>
+            </article>
+
+            <div class="subhead"><h3>Helpful, but on our terms</h3></div>
+
             <div class="pair">
-              
               <article class="card card--gauge" id="stat-optin" data-reveal>
                 <div class="gauge" style="--p:32"><img class="gauge__disc" src="assets/gauge-disc.svg" width="205.695" height="205.695" alt=""><img class="gauge__track" src="assets/gauge-track.svg" width="205.776" height="205.776" alt=""><svg class="gauge__arc" viewBox="0 0 205.776 205.776" aria-hidden="true"><circle cx="102.888" cy="102.888" r="98.0735" pathLength="100"/></svg><p class="gauge__num"><span data-count="32">32</span>%</p></div>
                 <h3 class="card__lead card__lead--sm">of people want to be asked before new AI features are enabled in their browser</h3>
@@ -337,6 +339,89 @@
         </div>
       </section>
     </div>
+
+    <!-- Summary — Figma State of browsing 2027, 94:4412 -->
+    <section class="summary" id="summary">
+      <div class="summary__intro">
+        <div class="summary__lead">
+          <h2 class="summary__title">Summary</h2>
+          <p>Google Chrome still dominates desktop market share, but privacy anxieties and AI skepticism are creating opportunities for alternative browsers.</p>
+        </div>
+        <div class="summary__art">
+          <div class="art art--shield" data-reveal aria-hidden="true">
+            <img class="art__shield" src="assets/summary-shield.svg" width="205.249" height="240.735" alt="">
+            <span class="art__core art__core--l"><img src="assets/summary-core-tabs.svg" width="118.218" height="125.976" alt=""></span>
+            <span class="art__core art__core--r"><img src="assets/summary-core-sparkle.svg" width="118.218" height="125.976" alt=""></span>
+          </div>
+        </div>
+      </div>
+      <div class="summary__cards">
+        <article class="summary__card">
+          <div class="summary__card-art">
+            <div class="art art--ask" data-reveal aria-hidden="true">
+              <div class="ask">
+                <span class="ask__head"><img src="assets/sparkle-sm.svg" width="15.9712" height="15.9712" alt=""><i></i></span>
+                <span class="ask__q"><i></i></span>
+                <span class="ask__btns"><span class="ask__btn ask__btn--on">Allow</span><span class="ask__btn">Not now</span></span>
+                <span class="ask__toggle-row">Ask first<span class="ask__toggle"></span></span>
+              </div>
+              <span class="core core--lock"><img src="assets/lock-lg.svg" width="53.6348" height="53.6348" alt=""></span>
+            </div>
+          </div>
+          <p>Younger adults are struggling more with digital fatigue, but both younger and older generations prefer browsers that give them more control over automated decision-making, even though a majority have used AI search tools. The findings produce a clear message for browsers: make browsing smarter without making people feel like they have surrendered control.</p>
+        </article>
+        <article class="summary__card">
+          <div class="summary__card-art">
+            <div class="art art--chips" data-reveal aria-hidden="true">
+              <span class="pill pill--1"><img src="assets/chip-lock.svg" width="26.0598" height="26.0601" alt="">Privacy</span>
+              <span class="pill pill--2"><img src="assets/chip-eye.svg" width="26.0598" height="26.0598" alt="">Transparency</span>
+              <span class="pill pill--3"><img src="assets/chip-check.svg" width="26.0598" height="26.0598" alt="">Permissions</span>
+              <span class="core core--spark"><img src="assets/sparkle-lg.svg" width="50.3216" height="50.3216" alt=""></span>
+            </div>
+          </div>
+          <p>Most people appear receptive to AI when it helps them research, organize and navigate information, but transparency, privacy protections, and user choice may be just as important to adoption as the underlying technology.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="download" id="download">
+      <div class="download__card">
+        <h2>Download the 2027 State of Browsing Report</h2>
+        <form class="download__form" data-download>
+          <input type="email" name="email" placeholder="Email address" aria-label="Email address" autocomplete="email" required>
+          <button class="btn btn--white btn--lg" type="submit">Get report</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- About — Figma State of browsing 2027, 94:4497 -->
+    <section class="about" id="about">
+      <div class="about__text">
+        <h2>About the 2027 State of Browsing Report</h2>
+        <div class="about__copy">
+          <p>This survey was conducted among 1,005 U.S. internet users in September, 2026 by MX8 Labs. The sample is nationally representative across age, gender, income, and region.</p>
+          <p>Shift Browser commissioned and produced the 2027 State of Browsing Report to understand what people actually want from their browser, not what the industry assumes they want.</p>
+        </div>
+      </div>
+      <div class="about__art">
+        <div class="art art--survey" data-reveal aria-hidden="true">
+          <span class="sv sv--l"></span><span class="sv sv--r"></span>
+          <div class="sv-card">
+            <span class="sv-card__top">
+              <i class="sv-card__eyebrow"></i><i class="sv-card__q" style="width:81.92%"></i><i class="sv-card__q" style="width:57.56%"></i>
+            </span>
+            <span class="sv-card__opts">
+              <span class="sv-opt"><b></b><i style="flex:none;width:181.764px"></i></span>
+              <span class="sv-opt sv-opt--on"><b></b><i></i></span>
+              <span class="sv-opt"><b></b><i style="flex:none;width:134.383px"></i></span>
+            </span>
+            <span class="sv-card__foot"><i></i></span>
+          </div>
+          <span class="sv-badge"><img src="assets/circle-user.svg" width="28.4468" height="28.4468" alt=""><span><span data-count="1000">1,000</span>+</span></span>
+          <span class="core core--clip"><img src="assets/clipboard-list-check.svg" width="48" height="60" alt=""></span>
+        </div>
+      </div>
+    </section>
 
     <!-- CTA — Figma 1525:34620 -->
     <section class="cta">

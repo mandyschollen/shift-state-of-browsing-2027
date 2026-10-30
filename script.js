@@ -5,12 +5,12 @@
   // ---------- Count numbers up when their card appears ----------
   function countUp(el) {
     var to = parseInt(el.dataset.count, 10);
-    if (reduced || !to) { el.textContent = to; return; }
+    if (reduced || !to) { el.textContent = to.toLocaleString('en-US'); return; }
     var start = null, dur = 1200;
     function step(t) {
       if (!start) start = t;
       var k = Math.min(1, (t - start) / dur);
-      el.textContent = Math.round(to * (1 - Math.pow(1 - k, 3)));
+      el.textContent = Math.round(to * (1 - Math.pow(1 - k, 3))).toLocaleString('en-US');
       if (k < 1) requestAnimationFrame(step);
     }
     el.textContent = '0';
@@ -107,6 +107,10 @@
     toastTimer = setTimeout(function () { toast.classList.remove('is-on'); }, 2200);
   }
   var base = location.href.split('#')[0];
+  // Download form (prototype only: nothing is sent)
+  var dl = document.querySelector('[data-download]');
+  if (dl) dl.addEventListener('submit', function (e) { e.preventDefault(); dl.reset(); say('Thanks! The report is on its way to your inbox'); });
+
   document.querySelectorAll('[data-share]').forEach(function (b) {
     b.addEventListener('click', function () {
       var text = b.dataset.share + ' From The 2027 State of Browsing Report by Shift.';
@@ -132,4 +136,16 @@
     var ch = target && target.closest('[data-chapter]');
     if (ch) { setOpen(ch, true); setTimeout(function () { target.scrollIntoView(); }, 750); }
   }
+  // ---------- Summary / About graphics: built at Figma size, scaled down to fit narrow cards ----------
+  var arts = document.querySelectorAll('.art');
+  function fitArts() {
+    arts.forEach(function (art) {
+      var cs = getComputedStyle(art), w = parseFloat(cs.getPropertyValue('--w')), h = parseFloat(cs.getPropertyValue('--h'));
+      var k = Math.min(1, art.parentElement.clientWidth / w);
+      art.style.setProperty('--k', k);
+      art.style.margin = (-h * (1 - k) / 2) + 'px ' + (-w * (1 - k) / 2) + 'px';
+    });
+  }
+  fitArts();
+  window.addEventListener('resize', fitArts);
 })();
